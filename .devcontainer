@@ -1,0 +1,18 @@
+{
+  "name": "Rust Development",
+  "image": "mcr.microsoft.com/devcontainers/rust:1-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "postCreateCommand": "cargo install cargo-watch && rustup component add clippy rustfmt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "ms-vscode.vscode-typescript-tslint-plugin"
+      ]
+    }
+  }
+}
